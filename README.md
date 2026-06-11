@@ -1,6 +1,7 @@
 # TicketFlow
 TicketFlow is a modern, high-performance, open-source internal IT ticketing system. Built from the ground up with Go (Gin) and GORM, it delivers lightning-fast processing speeds, minimal memory footprint, and native support for complex corporate IT workflows.
 Unlike legacy ticketing systems, GoTicket natively supports dynamic Ticket Types, structured Content blocks, and multi-stage Approval Flows required by modern enterprise operations.
+
 ------------------------------
 ## ✨ Core Features
 

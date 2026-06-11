@@ -113,4 +113,4 @@ Distributed under the MIT License. See LICENSE for more detailed information.
 
 
 ## Project Type
-[Nuxt.js](https://nuxt.com/) + [Vapor](https://vapor.codes/)
+[Nuxt.js](https://nuxt.com/) + [Go Gin](https://gin-gonic.com/) + [GORM](https://gorm.io/index.html)

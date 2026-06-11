@@ -14,14 +14,15 @@ Unlike legacy ticketing systems, GoTicket natively supports dynamic Ticket Types
 ------------------------------
 ## 🏗️ Architecture & Database Design
 GoTicket uses GORM for relational mapping. Below is the simplified structure representing how Ticket Types, Custom Content, and Approval Flows interact:
-
+```text
 ┌─────────────────┐         ┌──────────────┐         ┌─────────────────────┐
 │   TicketType    │ ──────> │    Ticket    │ ──────> │    ApprovalFlow     │
 │ (Access, Asset) │         │ (JSONB Body) │         │ (Pending/Approved)  │
 └─────────────────┘         └──────────────┘         └─────────────────────┘
+```
 
 ## Core Schema Preview (GORM Models)
-
+```go
 type TicketType string
 const (
     AccessRequest      TicketType = "ACCESS_REQUEST"
@@ -46,6 +47,7 @@ type ApprovalFlow struct {
     Status       string `gorm:"type:varchar(50);default:'PENDING'" json:"status"` // PENDING, APPROVED, REJECTED
     Comment      string `json:"comment"`
 }
+```
 
 ------------------------------
 ## 🛠️ Technology Stack
@@ -66,18 +68,21 @@ GoTicket is fully containerized. You can spin up the backend server along with a
 ## Running Locally
 
    1. Clone the repository:
-   
+   ```
    git clone https://github.com
    cd goticket
+   ```
    
    2. Spin up the stack:
-   
+   ```
    docker compose up -d
+   ```
    
    3. Verify the server status:
    The backend API will be available at http://localhost:8080. You can test the system health check route using curl:
-   
+   ```
    curl http://localhost:8080/api/v1/health
+   ```
    
    
 ------------------------------
